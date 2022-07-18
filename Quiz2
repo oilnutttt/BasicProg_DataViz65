@@ -1,0 +1,219 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMLM5eAD00Mtgt/KpO1IbAX",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/oilnutttt/BasicProg_DataViz65/blob/main/Quiz2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Matrix Slicing"
+      ],
+      "metadata": {
+        "id": "yYOeAUZqfAE_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy"
+      ],
+      "metadata": {
+        "id": "aptPT9ZefJ5v"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_a = [[2,4,5],[1,2,3],[9,8,7],[3,6,9]]\n",
+        "mat_a = numpy.array(list_a)\n",
+        "mat_a"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ENJdCJy_fPPx",
+        "outputId": "7013af56-aa0c-4a87-8d7e-5f8bf315162d"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[2, 4, 5],\n",
+              "       [1, 2, 3],\n",
+              "       [9, 8, 7],\n",
+              "       [3, 6, 9]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np"
+      ],
+      "metadata": {
+        "id": "qwghX5wPfa_b"
+      },
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_b = [[-1,-1,2,4,5],[-2,-2,1,2,3],[-3,-3,9,8,7],[-4,-4,3,6,9]]\n",
+        "mat_b = np.array(list_b)\n",
+        "mat_b"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qx3ZWydifdyk",
+        "outputId": "c658535d-c951-4adb-8f27-81a86b890dab"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[-1, -1,  2,  4,  5],\n",
+              "       [-2, -2,  1,  2,  3],\n",
+              "       [-3, -3,  9,  8,  7],\n",
+              "       [-4, -4,  3,  6,  9]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Quiz2\n",
+        "  1. slice ค่าลบออกมาจาก mat_b\n",
+        "  2. slice [1,2,3] จาก mat_a\n",
+        "  3. slice [[1,3],[9,7],[3,9]] ออกมาจาก mat_b"
+      ],
+      "metadata": {
+        "id": "xvZnpvnZfh6U"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mat_b[-5:,:2]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "d9ma-1Nkfqbi",
+        "outputId": "218beb24-222b-433f-8966-a907bdc2b287"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[-1, -1],\n",
+              "       [-2, -2],\n",
+              "       [-3, -3],\n",
+              "       [-4, -4]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mat_a[1:2]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fpKALQoTf8pA",
+        "outputId": "e4dc7a0e-cf50-497f-d4f8-27c98e0d638f"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1, 2, 3]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mat_b[1:,2::2]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yWAx3axDf-sO",
+        "outputId": "5e344953-3d4a-4136-d16c-145349f07fa7"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1, 3],\n",
+              "       [9, 7],\n",
+              "       [3, 9]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    }
+  ]
+}
